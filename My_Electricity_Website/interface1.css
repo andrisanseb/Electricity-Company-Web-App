@@ -1,0 +1,669 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+/*Nav-Bar*/
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #ff6666;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* desktop */
+@media only screen and (min-width:1181px){
+
+  .wrapper{
+    display: grid;
+    grid-gap: 1em;
+    grid-template-rows: auto auto auto auto;
+    background-color: #ccf2ff;
+		background-image: linear-gradient(rgba(4,9,30,0.1),rgba(4,9,30,0.1)),url(https://www.netpremacy.com/wp-content/uploads/2018/09/Background-website-01.jpg);
+	  background-position: center;
+	  background-size: cover;
+	  position:relative;
+    width:100%;
+  }
+
+  .who-are-we{
+    display: grid;
+    grid-template-areas:
+    "wawh wawh"
+    "wawt wawv";
+    grid-row-gap: 2em;
+    grid-column-gap: 2em;
+    margin: 80px;
+  }
+
+  .who-are-we-header{
+    text-align: center;
+    grid-area: wawh;
+    padding-bottom: 60px;
+    color: #0033cc;
+    font-family: "Arial Black", sans-serif;
+    font-size: 4.5em;
+    letter-spacing: -1px;
+  }
+
+  .who-are-we-text{
+    grid-area: wawt;
+    font-size: 17px;
+  }
+
+  .who-are-we-video{
+    grid-area: wawv;
+  }
+
+  .services{
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "s-header s-header s-header s-header"
+    "s1 s2 s3 s4"
+    "button2 button2 button2 button2";
+    grid-column-gap: 10px;
+    margin: 20px;
+  }
+
+  .services-header{
+    text-align: center;
+    grid-area: s-header;
+    padding: 40px;
+    color: #0033cc;
+    font-family: "Arial Black", sans-serif;
+    letter-spacing: -1px;
+  }
+
+  .service1{
+    grid-area: s1;
+  }
+  .service2{
+    grid-area: s2;
+  }
+  .service3{
+    grid-area: s3;
+  }
+  .service4{
+    grid-area: s4;
+  }
+
+  .responsive {
+    width: 100%;
+    height: auto;
+		border-radius: 10px;
+  }
+
+  .button2{
+    text-align: center;
+    margin: 40px;
+    grid-area: button2;
+  }
+
+.button2  a{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #2196f3;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 30px;
+    overflow: hidden;
+    transition: 0.2s;
+  }
+
+.button2  a:hover{
+    color: white;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  }
+
+  .img-gallery-wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3px;
+    margin-bottom:15px;
+  }
+
+  .img-gallery-wrapper img{
+    width:100%;
+    border-radius: 10px;
+  }
+
+  .box{
+    padding:5px;
+  }
+
+	.register{
+		display: grid;
+    background-color: rgba(0, 153, 153,0.8);
+    border-radius: 50px;
+    text-align: center;
+    margin-left: 393px;
+    margin-right: 393px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+		grid-auto-rows: repeat(1,1fr);
+		grid-row-gap: 10px;
+		padding: 10px;
+  }
+
+  input{
+    height: 40px;
+    width:70%;
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .footer{
+    padding: 30px;
+    background-color: #0099cc;
+    display: grid;
+    color:white;
+    grid-template-columns: auto auto;
+    text-align: center;
+    max-height: 440px;
+  }
+
+  .contact{
+    padding-top:80px;
+  }
+
+	.admin_button{
+    width: 68px;
+    margin: auto;
+    color: white;
+    background-color: rgb(16, 9, 219);
+    border-radius: 50px;
+  }
+
+}
+
+
+@media only screen and (max-width:1180px) and (min-width:768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .toggle-button {
+      display: flex;
+  }
+
+  .navbar-links {
+      display: none;
+      width: 100%;
+  }
+
+  .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+  }
+
+  .navbar-links ul li {
+      text-align: center;
+  }
+
+  .navbar-links ul li a {
+      padding: .5rem 1rem;
+  }
+
+  .navbar-links.active {
+      display: flex;
+  }
+
+  .wrapper{
+    display: grid;
+    grid-gap: 1em;
+    grid-template-rows: auto auto auto;
+    background-color: #ccf2ff;
+		background-image: linear-gradient(rgba(4,9,30,0.1),rgba(4,9,30,0.1)),url(https://www.netpremacy.com/wp-content/uploads/2018/09/Background-website-01.jpg);
+	  background-position: center;
+	  background-size: cover;
+	  position:relative;
+    width:100%;
+  }
+
+  .who-are-we{
+    display: grid;
+    grid-template-areas:
+    "wawh"
+    "wawt"
+    "wawv";
+		grid-auto-rows: auto auto auto;
+    grid-row-gap: 2em;
+		width: 100%;
+		padding: 35px;
+  }
+
+  .who-are-we-header{
+    text-align: center;
+    grid-area: wawh;
+    padding-bottom: 10px;
+    color: #0033cc;
+    font-family: "Arial Black", sans-serif;
+    font-size: 4.5em;
+    letter-spacing: -1px;
+  }
+
+  p{
+    text-align: center;
+  }
+
+  .who-are-we-text{
+    text-align: left;
+    grid-area: wawt;
+    font-size: 17px;
+		width:100%;
+		word-wrap: break-word;
+  }
+
+  .who-are-we-video{
+    grid-area: wawv;
+  }
+
+	.services{
+		display: grid;
+		text-align: center;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+		"s-header s-header"
+		"s1 s2"
+		"s3 s4"
+		"button2 button2";
+		grid-gap: 30px;
+		margin: 30px;
+	}
+
+	.services-header{
+		text-align: center;
+		grid-area: s-header;
+		padding: 40px;
+		color: #0033cc;
+		font-family: "Arial Black", sans-serif;
+		letter-spacing: -1px;
+	}
+
+	.service1{
+		grid-area: s1;
+	}
+	.service2{
+		grid-area: s2;
+	}
+	.service3{
+		grid-area: s3;
+	}
+	.service4{
+		grid-area: s4;
+	}
+
+	.responsive {
+		width: 100%;
+		height: auto;
+		border-radius: 10px;
+	}
+
+	.button2{
+    text-align: center;
+    margin: 40px;
+    grid-area: button2;
+  }
+
+.button2  a{
+		position: relative;
+		display: inline-block;
+		padding: 15px 30px;
+		color: #2196f3;
+		letter-spacing: 4px;
+		text-decoration: none;
+		font-size: 30px;
+		overflow: hidden;
+		transition: 0.2s;
+	}
+
+.button2  a:hover{
+		color: white;
+		background: #2196f3;
+		box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+	}
+
+
+	.img-gallery-wrapper{
+	   display: grid;
+	   grid-template-columns: repeat(2, 1fr);
+	   grid-gap: 30px;
+	   margin-bottom:15px;
+	 		margin: 40px;
+	 }
+
+	  .img-gallery-wrapper img{
+	    width:100%;
+	    border-radius: 10px;
+	  }
+
+	  .box{
+	    padding:5px;
+	  }
+
+
+		.register{
+			display: grid;
+	    background-color: rgba(0, 153, 153,0.8);
+	    border-radius: 50px;
+	    text-align: center;
+	    margin-left: 170px;
+	    margin-right: 170px;
+	    margin-top: 40px;
+	    margin-bottom: 80px;
+			grid-auto-rows: repeat(1,1fr);
+			grid-row-gap: 10px;
+			padding: 10px;
+	  }
+
+	  input{
+	    height: 40px;
+	    width:70%;
+	    font-size: 14px;
+	    text-align: left;
+	  }
+
+
+  .footer{
+    padding: 21px;
+    background-color: #0099cc;
+    display: grid;
+    color:white;
+    grid-template-rows: auto auto auto;
+    text-align: center;
+    max-height: 700px;
+  }
+
+	.contact{
+    padding-top:40px;
+  }
+
+	.admin_button{
+		width: 68px;
+		margin: auto;
+		color: white;
+		background-color: rgb(16, 9, 219);
+		border-radius: 50px;
+		margin-top: 15px;
+	}
+
+}
+
+
+  /*phone-view*/
+  @media only screen and (max-width:767px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+
+		.wrapper{
+			display: grid;
+			grid-gap: 1em;
+			grid-template-rows: auto auto auto;
+			background-color: #ccf2ff;
+			background-image: linear-gradient(rgba(4,9,30,0.1),rgba(4,9,30,0.1)),url(https://www.netpremacy.com/wp-content/uploads/2018/09/Background-website-01.jpg);
+		  background-position: center;
+		  background-size: cover;
+		  position:relative;
+			width:100%;
+		}
+
+		.who-are-we{
+			display: grid;
+			grid-template-areas:
+			"wawh"
+			"wawt"
+			"wawv";
+			grid-auto-rows: auto auto auto;
+			grid-row-gap: 2em;
+			width: 100%;
+			padding: 35px;
+		}
+
+		.who-are-we-header{
+			text-align: center;
+			grid-area: wawh;
+			padding-bottom: 10px;
+			color: #0033cc;
+			font-family: "Arial Black", sans-serif;
+			font-size: 4.5em;
+			letter-spacing: -1px;
+		}
+
+		p{
+			text-align: center;
+		}
+
+		.who-are-we-text{
+			text-align: left;
+			grid-area: wawt;
+			font-size: 17px;
+			width:100%;
+			word-wrap: break-word;
+		}
+
+		.who-are-we-video{
+			grid-area: wawv;
+		}
+
+		.services{
+			display: grid;
+			text-align: center;
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas:
+			"s-header s-header"
+			"s1 s2"
+			"s3 s4"
+			"button2 button2";
+			grid-gap: 30px;
+			margin: 30px;
+		}
+
+		.services-header{
+			text-align: center;
+			grid-area: s-header;
+			padding: 40px;
+			color: #0033cc;
+			font-family: "Arial Black", sans-serif;
+			letter-spacing: -1px;
+		}
+
+		.service1{
+			grid-area: s1;
+		}
+		.service2{
+			grid-area: s2;
+		}
+		.service3{
+			grid-area: s3;
+		}
+		.service4{
+			grid-area: s4;
+		}
+
+		.responsive {
+			width: 100%;
+			height: auto;
+			border-radius: 10px;
+		}
+
+		.button2{
+	    text-align: center;
+	    margin: 40px;
+	    grid-area: button2;
+	  }
+
+	.button2  a{
+			position: relative;
+			display: inline-block;
+			padding: 15px 30px;
+			color: #2196f3;
+			letter-spacing: 4px;
+			text-decoration: none;
+			font-size: 30px;
+			overflow: hidden;
+			transition: 0.2s;
+		}
+
+	.button2  a:hover{
+			color: white;
+			background: #2196f3;
+			box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+		}
+
+
+		.img-gallery-wrapper{
+		   display: grid;
+		   grid-template-columns: repeat(1, 1fr);
+		   grid-gap: 30px;
+		   margin-bottom:15px;
+		 		margin: 40px;
+		 }
+
+		  .img-gallery-wrapper img{
+		    width:100%;
+		    border-radius: 10px;
+		  }
+
+		  .box{
+		    padding:5px;
+		  }
+
+			.register{
+				display: grid;
+		    background-color: rgba(0, 153, 153,0.8);
+		    border-radius: 50px;
+		    text-align: center;
+		    margin-left: 110px;
+		    margin-right: 110px;
+		    margin-top: 40px;
+		    margin-bottom: 80px;
+				grid-auto-rows: repeat(1,1fr);
+				grid-row-gap: 10px;
+				padding: 10px;
+		  }
+
+		  input{
+		    height: 40px;
+		    width:70%;
+		    font-size: 14px;
+		    text-align: left;
+		  }
+
+    iframe{
+      width:410px;
+    }
+
+		.footer{
+			padding: 21px;
+			background-color: #0099cc;
+			display: grid;
+			color:white;
+			grid-template-rows: auto auto auto;
+			text-align: center;
+			max-height: 700px;
+		}
+
+		.contact{
+			padding-top:40px;
+		}
+
+		.admin_button{
+	    width: 68px;
+	    margin: auto;
+	    color: white;
+	    background-color: rgb(16, 9, 219);
+	    border-radius: 50px;
+	    margin-top: 15px;
+	  }
+
+}

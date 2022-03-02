@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./interface5.css" type="text/css">
+    <script src="script.js" defer></script>
+    <title>Gazprom Admin E18008</title>
+    <title></title>
+  </head>
+  <body>
+    <nav class="navbar">
+        <div class="brand-title">Gazprom</div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="./interface1.html">Home</a></li>
+            <li><a href="./interface2.html">About Us</a></li>
+            <li><a href="./interface3.html">Electricity Cost</a></li>
+            <li><a href="./interface4.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    <div class="admin_page">
+      <h1>ADMIN PASSWORD VERIFICATION</h1>
+      <input id="password" type="password" name="password" value="" placeholder="admin-password">
+      <input class="submit_input" type="submit" name="button" value="Connect" id="btn"></input>
+    </div>
+
+    <footer>
+      <div class="footer" name="footer">
+        <div class="contact">
+          <h3 style="margin-bottom: 22px; text-decoration:underline;">Contact Details</h3>
+          <p style="padding:8px;">Telephone: <a href="tel:21 0333 0000">2103330000</a></p>
+          <p style="padding:8px;">Email: <a href="mailto:gazprom@company.com">gazprom@company.com</a></p>
+          <p style="padding:8px; padding-bottom:28px;">Main HQs: Nametkina St, 16, Moscow, Russia</p>
+        </div>
+        <div class="maps">
+          <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36346283.36468229!2d31.616704215076926!3d56.21930716069433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cd7ec5181df%3A0x38e7f7060950a3dc!2sGasprom!5e0!3m2!1sen!2sgr!4v1628101918470!5m2!1sen!2sgr" width="600" height="370" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
+        </div>
+          <a href="./interface5.html" class="admin_button">ADMIN</a>
+      </div>
+    </footer>
+
+
+    <script type="text/javascript">
+            btn.onclick = function() {
+              const x = document.getElementById("password").value;
+              if(x == "admin123"){
+                window.location.replace("./admin_page.php");
+              }
+              else
+              {
+              alert('Sorry, you are not the admin of this application.');
+              }
+            };
+    </script>
+  </body>
+</html>

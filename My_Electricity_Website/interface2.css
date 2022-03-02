@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+/*Nav-Bar*/
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #ff6666;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+/*desktop-view*/
+@media only screen and (min-width:1181px) {
+  .wrapper{
+    display: grid;
+    grid-gap: 1em;
+    grid-template-rows: auto auto auto auto;
+    background-color: #ccf2ff;
+    width:100%;
+  }
+
+  .about-us{
+    display: grid;
+    grid-template-areas:
+     "about-us-header about-us-header about-us-header"
+     "philosophy vision mission";
+    grid-column-gap: 1em;
+    margin: 30px;
+  }
+
+  .about-us-header{
+    text-align: center;
+    grid-area: about-us-header;
+    padding-bottom: 40px;
+  }
+  .philosophy{
+    text-align: center;
+    grid-area: philosophy;
+  }
+  .vision{
+    text-align: center;
+    grid-area: vision;
+  }
+  .mission{
+    text-align: center;
+    grid-area: mission;
+  }
+
+  .img-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .responsive {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+}
+
+  .human-power{
+    display: grid;
+    grid-column-gap: 1em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "human-power-header human-power-header human-power-header human-power-header"
+    "tec-dep sup-dep sal-dep log-dep";
+    margin: 30px;
+  }
+
+  .human-power-header{
+    text-align: center;
+    grid-area: human-power-header;
+    padding-bottom: 50px;
+  }
+  .tec-dep{
+    text-align: center;
+    grid-area: tec-dep;
+  }
+  .sup-dep{
+    text-align: center;
+    grid-area: sup-dep;
+  }
+  .sal-dep{
+    text-align: center;
+    grid-area: sal-dep;
+  }
+  .log-dep{
+    text-align: center;
+    grid-area: log-dep;
+  }
+
+  .button-to-interface3{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+.button3  a{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #2196f3;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 30px;
+    overflow: hidden;
+    transition: 0.2s;
+  }
+
+.button3  a:hover{
+    color: white;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  }
+
+	.footer{
+    padding: 30px;
+    background-color: #0099cc;
+    display: grid;
+    color:white;
+    grid-template-columns: auto auto;
+    text-align: center;
+    max-height: 440px;
+  }
+
+  .contact{
+    padding-top:80px;
+  }
+
+	.admin_button{
+    width: 68px;
+    margin: auto;
+    color: white;
+    background-color: rgb(16, 9, 219);
+    border-radius: 50px;
+  }
+
+}
+
+/*tablet-view*/
+@media only screen and (max-width:1180px) and (min-width:768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .toggle-button {
+      display: flex;
+  }
+
+  .navbar-links {
+      display: none;
+      width: 100%;
+  }
+
+  .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+  }
+
+  .navbar-links ul li {
+      text-align: center;
+  }
+
+  .navbar-links ul li a {
+      padding: .5rem 1rem;
+  }
+
+  .navbar-links.active {
+      display: flex;
+  }
+
+  .wrapper{
+    display: grid;
+    grid-gap: 1em;
+    grid-template-rows: auto auto auto auto;
+    background-color: #ccf2ff;
+    max-width:1180px;
+  }
+
+  .about-us{
+    display: grid;
+    grid-template-areas:
+     "about-us-header"
+     "philosophy"
+     "vision"
+     "mission";
+    grid-row-gap: 40px;
+    margin: 50px;
+  }
+
+  .about-us-header{
+    text-align: center;
+    grid-area: about-us-header;
+    padding-bottom: 27px;
+  }
+  .philosophy{
+    text-align: center;
+    grid-area: philosophy;
+  }
+  .vision{
+    text-align: center;
+    grid-area: vision;
+  }
+  .mission{
+    text-align: center;
+    grid-area: mission;
+  }
+
+
+  .img-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .responsive {
+   width: 100%;
+   height: 250px;
+  }
+
+  .human-power{
+    display: grid;
+    grid-column-gap: 1em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "human-power-header human-power-header"
+    "tec-dep sup-dep"
+    " sal-dep log-dep";
+    margin:25px;
+    grid-gap: 30px;
+  }
+
+  .human-power-header{
+    text-align: center;
+    grid-area: human-power-header;
+    padding-bottom: 10px;
+  }
+  .tec-dep{
+    text-align: center;
+    grid-area: tec-dep;
+  }
+  .sup-dep{
+    text-align: center;
+    grid-area: sup-dep;
+  }
+  .sal-dep{
+    text-align: center;
+    grid-area: sal-dep;
+  }
+  .log-dep{
+    text-align: center;
+    grid-area: log-dep;
+  }
+
+
+  .button-to-interface3{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .button3  a{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #2196f3;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 30px;
+    overflow: hidden;
+    transition: 0.2s;
+  }
+
+  .button3  a:hover{
+    color: white;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  }
+
+	.footer{
+		padding: 21px;
+		background-color: #0099cc;
+		display: grid;
+		color:white;
+		grid-template-rows: auto auto auto;
+		text-align: center;
+		max-height: 700px;
+	}
+
+	.contact{
+		padding-top:40px;
+	}
+
+	.admin_button{
+    width: 68px;
+    margin: auto;
+    color: white;
+    background-color: rgb(16, 9, 219);
+    border-radius: 50px;
+    margin-top: 15px;
+  }
+}
+
+/*phone-view*/
+@media only screen and (max-width:767px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .toggle-button {
+      display: flex;
+  }
+
+  .navbar-links {
+      display: none;
+      width: 100%;
+  }
+
+  .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+  }
+
+  .navbar-links ul li {
+      text-align: center;
+  }
+
+  .navbar-links ul li a {
+      padding: .5rem 1rem;
+  }
+
+  .navbar-links.active {
+      display: flex;
+  }
+
+  .wrapper{
+    display: grid;
+    grid-gap: 1em;
+    grid-template-rows: auto auto auto auto;
+    background-color: #ccf2ff;
+    max-width:1180px;
+  }
+
+  .about-us{
+    display: grid;
+    grid-template-areas:
+     "about-us-header"
+     "philosophy"
+     "vision"
+     "mission";
+    grid-row-gap: 40px;
+    margin: 50px;
+  }
+
+  .about-us-header{
+    text-align: center;
+    grid-area: about-us-header;
+    padding-bottom: 27px;
+  }
+  .philosophy{
+    text-align: center;
+    grid-area: philosophy;
+  }
+  .vision{
+    text-align: center;
+    grid-area: vision;
+  }
+  .mission{
+    text-align: center;
+    grid-area: mission;
+  }
+
+  .img-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .responsive {
+   width: 100%;
+   height: 250px;
+  }
+
+  .human-power{
+    display: grid;
+    grid-column-gap: 1em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "human-power-header human-power-header"
+    "tec-dep sup-dep"
+    " sal-dep log-dep";
+    margin:25px;
+    grid-gap: 30px;
+  }
+
+  .human-power-header{
+    text-align: center;
+    grid-area: human-power-header;
+    padding-bottom: 10px;
+  }
+  .tec-dep{
+    text-align: center;
+    grid-area: tec-dep;
+  }
+  .sup-dep{
+    text-align: center;
+    grid-area: sup-dep;
+  }
+  .sal-dep{
+    text-align: center;
+    grid-area: sal-dep;
+  }
+  .log-dep{
+    text-align: center;
+    grid-area: log-dep;
+  }
+
+  .button-to-interface3{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .button3  a{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #2196f3;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 30px;
+    overflow: hidden;
+    transition: 0.2s;
+  }
+
+  .button3  a:hover{
+    color: white;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  }
+
+	.footer{
+		padding: 21px;
+		background-color: #0099cc;
+		display: grid;
+		color:white;
+		grid-template-rows: auto auto auto;
+		text-align: center;
+		max-height: 700px;
+	}
+
+	.contact{
+		padding-top:40px;
+	}
+
+	.admin_button{
+    width: 68px;
+    margin: auto;
+    color: white;
+    background-color: rgb(16, 9, 219);
+    border-radius: 50px;
+    margin-top: 15px;
+  }
+
+  iframe{
+    width:410px;
+  }
